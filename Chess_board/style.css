@@ -1,0 +1,23 @@
+td {
+	background-color: green;
+	height: 20px;
+	width: 20px;
+}
+
+.color {
+	background-color: skyblue;
+	height: 20px;
+	width: 20px;
+}
+.slider {
+	width: 400px;
+	float: left;
+}
+input {
+	width: 40px;
+	margin: 0px 10px;
+}
+#wrapper {
+	width: 1200px;
+	margin: auto;
+}
