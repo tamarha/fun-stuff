@@ -1,0 +1,90 @@
+body {
+	margin: 0px auto;
+	max-width: 960px;
+	font-family: arial;
+}
+#logout {
+	float:right;
+	margin: 5px 0px;
+	clear:both;
+}
+#errors {
+	color: red;
+}
+#session_messages {
+	color: #006633;
+}
+#users_list {
+	float: left;
+	width: 150px;
+	border: 2px solid #33CCCC;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 5px;
+}
+	#users_list a {
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+	}
+	.selected {
+		background-color: #33CCCC;
+		color: white;
+	}
+	#users_list a:hover {
+		color: #33CCCC;
+	}
+#wall {
+	float: right;
+	min-width: 600px;
+	max-width: 760px;
+}
+.form {
+	border: 2px solid #33CCCC;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+	.message_form textarea {
+		max-width: 640px;
+		max-height: 300px;
+	}
+#messages_wall {
+	border: 2px solid #33CCCC;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	clear: both;
+	max-width: 800px;
+}
+	.message {
+		background-color: #99FFCC;
+		padding: 5px 10px;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+		.title {
+			font-weight: bold;
+			float: right;
+		}
+		.text {
+			font-style: italic;
+			clear: both
+		}
+		.comment_form {
+			margin-left: 60px;  
+		}
+			.comment_form textarea {
+				min-width: 240px;
+				max-width: 680px;
+				max-height: 100px;
+			}
+	.comment {
+		background-color: #CCFFCC;
+		padding: 5px 10px;
+		border-radius: 10px;
+		margin: 10px 0px 10px 60px;
+	}
+		.delete {
+			float: left;
+		}
