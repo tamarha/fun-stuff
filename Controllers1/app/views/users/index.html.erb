@@ -3,4 +3,19 @@
 <% end %>
 
 <h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<table>
+		<tr>
+			<th>User ID</th>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Email address</th>
+		</tr>
+		<% @users.each do |user| %>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= user.first_name %></td>
+				<td><%= user.last_name %></td>
+				<td><%= user.email_address %></td>
+			</tr>
+		<% end %> 
+</table>
