@@ -1,15 +1,10 @@
 Controllers1::Application.routes.draw do
-  get "posts/index"
+  resources :posts
 
-  get "users/index"
 
-  get "posts/create"
+  resources :users
 
-  get "posts/new"
 
-  get "users/create"
-
-  get "users/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

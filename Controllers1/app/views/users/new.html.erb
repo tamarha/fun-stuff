@@ -4,16 +4,35 @@
 
 <h1>Create a new user</h1>
 
-<form title="form">
+<form title="form" method="post" action="/users">
 	<label>First name</label></br>
 	<input type="text" name="first_name"></br>
 	<label>Last name</label></br>
 	<input type="text" name="last_name"></br>
 	<label>Email</label></br>
-	<input type="text" name="email"></br>
-	<label>Password</label>
-	<input type="password" name="password">
+	<input type="text" name="email_address"></br>
+	<label>Password</label></br>
+	<input type="password" name="password"></br>
 	<input type="submit" value="Save User">
 </form>
 
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @messages.any? %>
+    <div id="message_explanation">
+      <% @messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
 
