@@ -1,0 +1,59 @@
+<% content_for :title do %>
+	Edit user
+<% end %>
+
+<h1>Edit user <%= @user.id %></h1>
+
+<p>Current information</p>
+<table>
+  <tr>
+    <th>First name: </th>
+    <td><%= @user.first_name %></td>
+  </tr>
+  <tr>
+    <th>First name: </th>
+    <td><%= @user.last_name %></td>
+  </tr>
+  <tr>
+    <th>First name: </th>
+    <td><%= @user.email_address %></td>
+  </tr>
+</table>
+</br></br>
+
+<form title="form" method="post" action="/users/<%= @user.id %>">
+  <input type="hidden" name="_method" value="put" />
+	<label>New First name</label></br>
+	<input type="text" name="first_name"></br>
+	<label>New Last name</label></br>
+	<input type="text" name="last_name"></br>
+	<label>New Email</label></br>
+	<input type="text" name="email_address"></br>
+	<label>New Password</label></br>
+	<input type="password" name="password"></br>
+	<input type="submit" value="Save User">
+</form>
+<form title="form" method="post" action="/users/<%= @user.id %>">
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="Delete User">
+</form>
+
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @messages.any? %>
+    <div id="message_explanation">
+      <% @messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
